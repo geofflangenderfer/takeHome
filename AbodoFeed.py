@@ -9,6 +9,7 @@ class AbodoFeed:
     def get_node(self, node_name, pid):
         out = None
         for node in pid.childNodes:
+            # see [1] at bottom of file
             is_node_name = type(node).__name__ == "Element" \
                     and node.tagName == node_name
             if is_node_name:
@@ -65,3 +66,4 @@ if __name__ == "__main__":
     XML = 'feed.xml'
     feed = AbodoFeed(XML)
     pprint(feed.properties)
+    #[1]: https://stackoverflow.com/questions/510972/getting-the-class-name-of-an-instance
