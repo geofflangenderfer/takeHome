@@ -1,5 +1,5 @@
 # Summary
-parse `abodo_feed.xml` to get basic Madison housing info
+parse `feed.xml` to get basic Madison housing info
 
 ```bash
 ❯ python AbodoFeed.py 
