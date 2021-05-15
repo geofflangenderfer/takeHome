@@ -52,6 +52,6 @@ class AbodoFeed:
         return properties
 
 if __name__ == "__main__":
-    XML = 'abodo_feed.xml'
+    XML = 'feed.xml'
     feed = AbodoFeed(XML)
     pprint(feed.properties)
