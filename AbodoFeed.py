@@ -27,9 +27,9 @@ class AbodoFeed:
         email = self.get_node("Email",pid).childNodes[0].nodeValue
 
         return {
-                "property_id": property_id,
-                "name": name,
-                "email":email
+                "property_id" : property_id,
+                "name"        : name,
+                "email"       : email
         }
 
     def get_madison_pids(self, pids):
