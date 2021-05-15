@@ -22,9 +22,17 @@ class AbodoFeed:
         return city.childNodes[0].nodeValue
 
     def get_desired_data(self, pid):
-        property_id = self.get_node("Identification", pid).getAttribute("IDValue")
-        name = self.get_node("MarketingName", pid).childNodes[0].nodeValue
-        email = self.get_node("Email",pid).childNodes[0].nodeValue
+        property_id = self                   \
+            .get_node("Identification", pid) \
+            .getAttribute("IDValue")
+        name = self                          \
+            .get_node("MarketingName", pid)  \
+            .childNodes[0]                   \
+            .nodeValue
+        email = self                         \
+            .get_node("Email",pid)           \
+            .childNodes[0]                   \
+            .nodeValue
 
         return {
                 "property_id" : property_id,
