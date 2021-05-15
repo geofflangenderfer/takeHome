@@ -34,9 +34,10 @@ class AbodoFeed:
 
     def get_madison_pids(self, pids):
         out = []
-        for i, pid in enumerate(pids):
+        for pid in pids:
             city = self.get_city(pid)
-            if city == "Madison": out.append(pid)
+            if city == "Madison":
+                out.append(pid)
 
         return out
 
@@ -51,7 +52,6 @@ class AbodoFeed:
         return properties
 
 if __name__ == "__main__":
-    xml = 'abodo_feed.xml'
-    feed = AbodoFeed(xml)
+    XML = 'abodo_feed.xml'
+    feed = AbodoFeed(XML)
     pprint(feed.properties)
-
