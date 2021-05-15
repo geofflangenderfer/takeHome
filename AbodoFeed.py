@@ -9,7 +9,9 @@ class AbodoFeed:
     def get_node(self, node_name, pid):
         out = None
         for node in pid.childNodes:
-            if type(node).__name__ == "Element" and node.tagName == node_name:
+            is_node_name = type(node).__name__ == "Element" \
+                    and node.tagName == node_name
+            if is_node_name:
                 out = node
                 break
 
